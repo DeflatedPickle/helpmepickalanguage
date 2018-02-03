@@ -68,4 +68,17 @@ function checkButtons() {
 
     return values.join(", ");
 }
+
+function finishQuestions() {
+    removeElements();
+}
+
+function removeElements() {
+    var question = document.getElementById("question");
+    var answers = document.getElementById("answers");
+    var button = document.getElementById("button");
+
+    question.parentNode.removeChild(question);
+    answers.parentNode.removeChild(answers);
+    button.parentNode.removeChild(button);
 }
