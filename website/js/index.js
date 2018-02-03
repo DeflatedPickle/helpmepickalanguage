@@ -2,16 +2,23 @@ var current = 0;
 var options = [];
 
 function nextQuestion() {
+    if (current >= poll.length) {
+        finishQuestions();
+    }
+
     if (checkButtons() != "" || current === 0) {
         if (current > 0 && current <= poll.length) {
-            // console.log("Buttons:", checkButtons());
-            options.push(checkButtons());
+            console.log("Buttons:", checkButtons());
+
+            if (checkButtons() !== "---") {
+                options.push(checkButtons());
+            }
         }
 
         updateQuestion();
         current += 1;
 
-        // console.log(current, options);
+        console.log(current, options, poll.length);
     }
 }
 
@@ -59,7 +66,6 @@ function checkButtons() {
         }
     });
 
-    // console.log(values);
-
     return values.join(", ");
+}
 }
