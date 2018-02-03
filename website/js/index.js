@@ -3,14 +3,15 @@ var options = [];
 
 function nextQuestion() {
     if (checkButtons() != "" || current === 0) {
-        if (current > 0) {
+        if (current > 0 && current <= poll.length) {
+            // console.log("Buttons:", checkButtons());
             options.push(checkButtons());
         }
 
         updateQuestion();
         current += 1;
 
-        console.log(options)
+        // console.log(current, options);
     }
 }
 
@@ -48,9 +49,17 @@ function checkButtons() {
 
     buttons.forEach(function (item) {
         if (item.checked) {
-            values.push(item.value);
+            if (item.value == "Yes") {
+                values.push(poll[current - 1].mask_answers[0]);
+            } else if (item.value != "No") {
+                values.push(item.value);
+            } else {
+                values.push("---");
+            }
         }
     });
 
-    return values;
+    // console.log(values);
+
+    return values.join(", ");
 }

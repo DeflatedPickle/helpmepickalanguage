@@ -20,18 +20,21 @@ poll = [
     {
         "question": "Should it have a standard library?",
         "type": "radio",
-        "answers": ["Yes", "No"]
+        "answers": ["Yes", "No"],
+        "mask_answers": ["Standard Library"]
     },
 
     {
         "question": "Should it have a package manager?",
         "type": "radio",
-        "answers": ["Yes", "No"]
+        "answers": ["Yes", "No"],
+        "mask_answers": ["Package Manager"]
     },
 
     {
         "question": "Do you want it to be open-source?",
         "type": "radio",
-        "answers": ["Yes", "No"]
+        "answers": ["Yes", "No"],
+        "mask_answers": ["Open-Source"]
     }
 ];
