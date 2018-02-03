@@ -3,3 +3,8 @@ body {
     font-family: 'Roboto Mono', monospace;
     text-align: center;
 }
+
+ul {
+    list-style-type: decimal;
+    text-align: left;
+}
