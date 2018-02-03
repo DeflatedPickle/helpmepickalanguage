@@ -1,4 +1,4 @@
-{
+languages = {
   "Python": {
     "answers": ["Industry", "Interpreted", "Windows", "MacOS", "Linux", "Open-Source"],
     "website": "https://www.python.org/"
@@ -27,4 +27,4 @@
     "answers": ["Industry", "Compiled", "Windows", "MacOS", "Linux"],
     "website": "https://java.com"
   }
-}
+};
