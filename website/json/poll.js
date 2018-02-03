@@ -13,7 +13,7 @@ poll = [
 
     {
         "question": "What OS should it be available for?",
-        "type": "check",
+        "type": "checkbox",
         "answers": ["Windows", "MacOS", "Linux"]
     },
 
