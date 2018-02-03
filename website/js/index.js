@@ -4,8 +4,8 @@ var options = [];
 function nextQuestion() {
     if (current <= poll.length - 1) {
         var answers = document.getElementById("answers");
-        document.getElementById("question").innerHTML = poll[current].question;
-        removeChildren(answers);
+        document.getElementById("question").innerHTML = (current + 1) + ". " + poll[current].question;
+        answers.innerHTML = "";
 
         poll[current].answers.forEach(function (item) {
             var li = document.createElement("li");
@@ -16,10 +16,4 @@ function nextQuestion() {
 
         current += 1;
     }
-}
-
-function removeChildren(list) {
-    list.childNodes.forEach(function (item) {
-        list.removeChild(item);
-    });
 }
