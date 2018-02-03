@@ -2,8 +2,16 @@ var current = 0;
 var options = [];
 
 function nextQuestion() {
+    if (checkButtons() != "" || current === 0) {
+        if (current > 0) {
+            options.push(checkButtons());
+        }
+
         updateQuestion();
         current += 1;
+
+        console.log(options)
+    }
 }
 
 function updateQuestion() {
@@ -31,4 +39,18 @@ function updateQuestion() {
             li.appendChild(div);
         });
     }
+}
+
+function checkButtons() {
+    var buttons = document.getElementsByName("answer");
+
+    var values = [];
+
+    buttons.forEach(function (item) {
+        if (item.checked) {
+            values.push(item.value);
+        }
+    });
+
+    return values;
 }
