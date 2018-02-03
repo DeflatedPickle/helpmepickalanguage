@@ -7,6 +7,11 @@
 
         <link type="text/css" rel="stylesheet" href="css/main.css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500" rel="stylesheet">
+
+        <script type="text/javascript" src="json/poll.js"></script>
+        <script type="text/javascript" src="json/languages.js"></script>
+
+        <script type="text/javascript" src="js/main.js"></script>
     </head>
 
     <body>
@@ -19,6 +24,10 @@
 
             <ul id="answers">
             </ul>
+
+            <script>nextQuestion()</script>
+
+            <button onclick="nextQuestion()">Next</button>
         </main>
     </body>
 </html>
