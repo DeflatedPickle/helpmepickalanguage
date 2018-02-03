@@ -71,6 +71,13 @@ function checkButtons() {
 
 function finishQuestions() {
     removeElements();
+
+    var title = document.createElement("h3");
+    title.innerHTML = "Your next language could be:";
+    document.body.appendChild(title);
+
+    var list = document.createElement("ul");
+    document.body.appendChild(list);
 }
 
 function removeElements() {
